@@ -579,17 +579,70 @@ footer{
     color: var(--accent);
     margin-bottom: 20px;
 }
-.modal-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
+
 .modal-content p {
     margin-bottom: 15px;
     font-size: 1.05rem;
 }
+
+/* Galeriyi kapsayan div, geçiş düğmelerini konumlandırmak için */
+.modal-gallery {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Sabit yükseklik, projeler kısmındaki .modal-image ile aynı */
+    overflow: hidden; /* Sadece bir görselin görünmesini sağlar */
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Görsellerin bulunduğu kayan konteyner */
+.gallery-inner {
+    display: flex; /* Görselleri yan yana dizer */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out; /* Görsel geçiş animasyonu */
+}
+
+/* Tek bir görsel */
+.gallery-slide {
+    min-width: 100%; /* Her slaytın tüm alanı kaplamasını sağlar */
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Varsayılan olarak tüm görselleri gizle */
+}
+
+.gallery-slide.active {
+    display: block; /* Sadece aktif olanı göster */
+}
+
+/* Geçiş düğmeleri (Sağ ve Sol Oklar) */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    border-radius: 4px;
+}
+.prev-btn:hover, .next-btn:hover {
+    opacity: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
 
 
 /* RESPONSIVE DÜZENLEMELER (Mobil Görünüm) */
