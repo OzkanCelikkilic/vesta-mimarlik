@@ -208,7 +208,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     gap: 16px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 20px 40px rgba(9, 9, 9, 0.06);
 }
 .contact-item {
     display: flex;
