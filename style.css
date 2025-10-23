@@ -199,8 +199,8 @@ nav a:hover {
 
 /* Right card contact */
 .contact-card {
-    background: linear-gradient(180deg, var(--black), #0f0f0f);
-    color: #fff;
+    background: linear-gradient(180deg, #ffffff, #fffaf6);
+    color: var(--dark);
     border-radius: 18px;
     padding: 28px;
     height: 100%;
@@ -238,7 +238,7 @@ nav a:hover {
 }
 .contact-item .sub {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.85)
+    color: var(--muted);
 }
 
 /* ---------- Sections ---------- */
@@ -617,5 +617,4 @@ footer{
         align-items: flex-start;
         gap: 10px;
     }
-
 }
