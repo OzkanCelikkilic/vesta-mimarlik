@@ -1,81 +1,374 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vesta Mimarlık | İnce İşler Taşeronluk Hizmetleri</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vesta Mimarlık — İnce İşler Taşeronluk Hizmetleri</title>
+    
+    <meta name="description" content="Vesta Mimarlık - İnce işler taşeronluk (alçıpan, sıva, boya, mantolama, asma tavan, seramik vb.)" />
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Vesta Mimarlık Logosu" />
-        <h1>Vesta Mimarlık</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#hakkimizda">Hakkımızda</a></li>
-        <li><a href="#hizmetler">Hizmetler</a></li>
-        <li><a href="#projeler">Projeler</a></li>
-        <li><a href="#iletisim">İletişim</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container nav">
+            <a href="#anasayfa" class="brand"> <img src="images/logo.png" alt="Vesta Mimarlık Logo" onerror="this.style.display='none'">
+                <div>
+                    <h1>Vesta Mimarlık</h1>
+                    <p>İnce İşler Taşeronluk Hizmetleri</p>
+                </div>
+            </a>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>İnce İşlerde Uzman Çözümler</h2>
-      <p>Duvar, Sıva, Boya, Mantolama, Seramik, Asma Tavan ve daha fazlası...</p>
-      <a href="#iletisim" class="btn">İletişime Geç</a>
-    </div>
-  </section>
+            <nav aria-label="Ana Menü">
+                <ul>
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#hizmetler">Hizmetler</a></li>
+                    <li><a href="#projeler">Projeler</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </nav>
 
-  <section id="hakkimizda" class="content-section">
-    <h2>Hakkımızda</h2>
-    <p>
-      Vesta Mimarlık olarak, inşaat sektöründe uzun yıllara dayanan tecrübemizle kaliteli ve güvenilir taşeronluk hizmetleri sunuyoruz.
-      Amacımız, projelerinizi zamanında ve estetik bir şekilde tamamlamak.
-    </p>
-  </section>
+            <a href="#iletisim" class="cta">Teklif Al</a>
+        </div>
+    </header>
 
-  <section id="hizmetler" class="content-section dark-bg">
-    <h2>Hizmetlerimiz</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Duvar & Sıva</h3>
-        <p>Yüksek kaliteli malzeme ve profesyonel işçilikle duvar ve sıva uygulamaları.</p>
-      </div>
-      <div class="service-card">
-        <h3>Boya & Mantolama</h3>
-        <p>Uzun ömürlü, estetik ve enerji tasarruflu dış cephe çözümleri.</p>
-      </div>
-      <div class="service-card">
-        <h3>Seramik & Asma Tavan</h3>
-        <p>Modern tasarımlarla iç mekanlarınızda kalite ve zarafeti bir araya getiriyoruz.</p>
-      </div>
-    </div>
-  </section>
+    <main> 
+        <section class="hero container" id="anasayfa"> <div class="hero-card">
+                <span class="eyebrow">Vesta Mimarlık</span>
+                <h2>Emre ÇELİKKILIÇ — İnce İşler Taşeronluk Hizmetleri</h2>
+                <p class="lead">Duvar - Sıva - Boya - Mantolama - Hatıl - Seramik - Asma Tavan - Şap. Proje bazlı, güvenilir ve zamanında teslim odaklı hizmet sunuyoruz.</p>
 
-  <section id="projeler" class="content-section">
-    <h2>Projelerimiz</h2>
-    <div class="projects">
-      <img src="assets/project1.jpg" alt="Proje 1" />
-      <img src="assets/project2.jpg" alt="Proje 2" />
-      <img src="assets/project3.jpg" alt="Proje 3" />
-    </div>
-  </section>
+                <div class="services-list" aria-hidden>
+                    <div class="service-pill">Alçıpan & Asma Tavan</div>
+                    <div class="service-pill">Sıva & Boya</div>
+                    <div class="service-pill">Mantolama</div>
+                    <div class="service-pill">Seramik & Zemin</div>
+                    <div class="service-pill">Şap & Hazırlık</div>
+                </div>
 
-  <section id="iletisim" class="content-section dark-bg">
-    <h2>İletişim</h2>
-    <p><strong>Adres:</strong> Cumhuriyet Mahallesi, Köroğlu Caddesi, No:67, D:4, Gebze/KOCAELİ</p>
-    <p><strong>Telefon:</strong> <a href="tel:+905060980904">0506 098 09 04</a></p>
-    <p><strong>E-posta:</strong> <a href="mailto:emrecelikkilic@gmail.com">emrecelikkilic@gmail.com</a></p>
-  </section>
+                <div class="spacer-16"></div> <p class="small">Vesta Mimarlık olarak <strong>kalite</strong>, <strong>şeffaf maliyet</strong> ve <strong>zamanında teslim</strong> prensipleriyle çalışıyoruz. Referanslarımız ve projelerimiz için aşağıya göz atabilirsiniz.</p>
 
-  <footer>
-    <p>© 2025 Vesta Mimarlık. Tüm hakları saklıdır.</p>
-  </footer>
+                <div class="spacer-16"></div> <a href="#projeler" class="cta">Projelerimizi Gör</a> 
+            </div>
 
-  <script src="script.js"></script>
+            <aside class="contact-card" aria-label="İletişim Bilgileri">
+                <div class="contact-item">
+                    <div class="icon-circle">📞</div>
+                    <div>
+                        <div class="meta"><a href="tel:+905060980904">0506 098 09 04</a></div> <div class="sub small">Telefon ile teklif alın</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-circle">✉️</div>
+                    <div>
+                        <div class="meta"><a href="mailto:emrecelikkilic@gmail.com">emrecelikkilic@gmail.com</a></div> <div class="sub small">E-posta ile yazabilirsiniz</div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="small">Adres</div>
+                <div class="muted">Cumhuriyet Mahallesi, Köroğlu Caddesi, No:67, D:4, Gebze / KOCAELİ</div>
+            </aside>
+        </section>
+
+        <section id="hakkimizda" aria-labelledby="hakkimizda-title">
+            <div class="container"> 
+                <h3 class="section-title" id="hakkimizda-title">Hakkımızda</h3>
+                <div class="about">
+                    <div class="box">
+                        <p><strong>Vesta Mimarlık</strong>, ince işler taşeronluğu alanında deneyimli ekipleriyle yapı projelerinin uygulama aşamasında kapsamlı çözümler sunar. İşimizi planlı, şeffaf ve müşteri odaklı yürütür; her projede kalite ve güvenliği ön planda tutarız.</p>
+
+                        <h4 class="mt-14">Neden Vesta?</h4> 
+                        <ul class="ul-list"> 
+                            <li>Deneyimli ve uzman ekip</li>
+                            <li>Zamanında teslim ve sözleşme disiplini</li>
+                            <li>Malzeme & işçilik garantisi</li>
+                            <li>Proje bazlı şeffaf fiyatlandırma</li>
+                        </ul>
+
+                        <div class="spacer-12"></div> <a href="#iletisim" class="cta">Hemen Teklif Al</a>
+                    </div>
+
+                    <div>
+                        <div class="about-card"> 
+                            <h4 style="margin:0 0 8px">Hizmet Alanlarımız</h4>
+                            <p class="small muted" style="margin:0 0 10px">İç ve dış mekan uygulamaları, restorasyon destek işleri ve anahtar teslim ince iş çözümleri.</p>
+                            <div class="pill-wrap">
+                                <span class="service-pill pill-alt">Sıva & Alçı</span>
+                                <span class="service-pill pill-alt">Boya & Vernik</span>
+                                <span class="service-pill pill-alt">Mantolama</span>
+                                <span class="service-pill pill-alt">Seramik</span>
+                                <span class="service-pill pill-alt">Asma Tavan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hizmetler" aria-labelledby="hizmetler-title">
+            <div class="container">
+                <h3 class="section-title" id="hizmetler-title">Hizmetlerimiz</h3>
+                <div class="grid">
+                    <div class="service">
+                        <h4>Duvar & Sıva</h4>
+                        <p>Yapıların iç ve dış duvar uygulamalarında düzgün ve dayanıklı sıva çözümleri. Katmanlı uygulama ve yüzey hazırlığı uzmanlığımızdır.</p>
+                    </div>
+                    <div class="service">
+                        <h4>Boya & Vernik</h4>
+                        <p>Kaliteli boya uygulamaları, yüzey koruma ve estetik çözümler. İç mekan ve dış cephe boya süreci yönetimi.</p>
+                    </div>
+                    <div class="service">
+                        <h4>Mantolama</h4>
+                        <p>Isı yalıtımı ve mantolama uygulamaları ile enerji verimliliği sağlayan çözümler. Yönetmeliklere uygun uygulama.</p>
+                    </div>
+                    <div class="service">
+                        <h4>Asma Tavan & Alçıpan</h4>
+                        <p>Fonksiyonel ve estetik asma tavan sistemleri, alçıpan bölme duvar uygulamaları ve detay işçilik.</p>
+                    </div>
+                    <div class="service">
+                        <h4>Seramik & Zemin</h4>
+                        <p>Seramik, porselen ve zemin kaplama uygulamaları. Özenli zemin hazırlığı ve düzgün döşeme.</p>
+                    </div>
+                    <div class="service">
+                        <h4>Şap & Hazırlık</h4>
+                        <p>Zemin şap uygulamaları ve zemin altı hazırlık işleri, dayanıklılığı ön planda tutan uygulamalar.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-30"> 
+                    <a href="#iletisim" class="cta">Detaylı Bilgi ve Teklif Alın</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projeler" class="section projeler-section">
+            <div class="container">
+                <h3 class="section-title">Tamamlanan Projelerimiz</h3>
+                <p class="muted mb-40">Kalitemizi gösteren referanslarımız ve uzmanlığımızı yansıtan eserlerimiz.</p>
+                
+                <div class="proje-grid">
+                    
+                    <div class="proje-item">
+                        <img src="images/project1.jpg" alt="Gebze Konut Tadilat Projesi" class="proje-image">
+                        <div class="proje-info">
+                            <h3>Lüks Konut İç Tadilatı</h3>
+                            <p class="proje-summary">Komple iç mekan revizyonu ve yüksek kaliteli seramik uygulamaları ile modern bir yaşam alanı oluşturuldu.</p>
+                            <button class="btn secondary-btn small-btn modal-trigger" data-modal="modal-proje1">Projeyi İncele</button>
+                        </div>
+                    </div>
+                    <div class="proje-item">
+                        <img src="images/project2.jpg" alt="Tuzla Ticari Ofis İnce İşler" class="proje-image">
+                        <div class="proje-info">
+                            <h3>Ticari Ofis Katı</h3>
+                            <p class="proje-summary">Hızlı ve sorunsuz teslimatla, ofis bölmelerinden zemin şap işlerine kadar tüm ince işler başarıyla tamamlandı.</p>
+                            <button class="btn secondary-btn small-btn modal-trigger" data-modal="modal-proje2">Projeyi İncele</button>
+                        </div>
+                    </div>
+
+                    <div class="proje-item">
+                        <img src="images/project3.png" alt="Kocaeli Cephe Mantolama Uygulaması" class="proje-image">
+                        <div class="proje-info">
+                            <h3>Dış Cephe Mantolama ve Boya</h3>
+                            <p class="proje-summary">Yüksek enerji verimliliği sağlayan dış cephe ısı yalıtımı ve estetik cephe boya uygulaması yapılmıştır.</p>
+                            <button class="btn secondary-btn small-btn modal-trigger" data-modal="modal-proje3">Projeyi İncele</button>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <a href="#" class="cta mt-50">Tüm Projelerimiz</a> 
+
+            </div>
+        </section>
+
+        <div id="modal-proje1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">×</span>
+                <h2>Lüks Konut İç Tadilatı Detayları</h2>
+                <img src="images/project1.jpg" alt="Proje 1 Detay" class="modal-image">
+                <p><strong>Proje Yeri:</strong> Gebze, KOCAELİ</p>
+                <p><strong>Uygulanan Hizmetler:</strong> Duvar, Sıva, Özel Tasarım Asma Tavan, Seramik Uygulamaları, Elektrik Tesisat İyileştirmeleri, Boya.</p>
+                <p><strong>Açıklama:</strong> Müşterimizin vizyonuna uygun olarak baştan sona yenilenen bu konut projesinde, ıslak zeminlerde mermer görünümlü büyük ebatlı seramikler kullanılmış, salon ve odalarda modern LED aydınlatmalı nişli asma tavanlar yapılmıştır. İş, belirlenen süreden 10 gün önce teslim edilmiştir.</p>
+                <a href="#iletisim" class="cta small-btn">Teklif Alın</a> </div>
+        </div>
+
+        <div id="modal-proje2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">×</span>
+                <h2>Ticari Ofis Katı Detayları</h2>
+                <img src="images/project2.jpg" alt="Proje 2 Detay" class="modal-image">
+                <p><strong>Proje Yeri:</strong> Tuzla, İSTANBUL</p>
+                <p><strong>Uygulanan Hizmetler:</strong> Şap, Alçıpan Bölmeler, Boya, Zemin Kaplama Hazırlığı.</p>
+                <p><strong>Açıklama:</strong> Büyük bir teknoloji şirketinin yeni ofis katı için zemin düzeltme (şap) ve esnek çalışma alanları oluşturmak adına alçıpan bölmeler inşa edilmiştir. Titizlikle yapılan boya işleri ile kurumsal kimliğe uygun, ferah ve kullanıma hazır bir ortam sunulmuştur.</p>
+                <a href="#iletisim" class="cta small-btn">Teklif Alın</a> </div>
+        </div>
+        
+        <div id="modal-proje3" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">×</span>
+                <h2>Dış Cephe Mantolama ve Boya Detayları</h2>
+                <img src="images/project3.png" alt="Proje 3 Detay" class="modal-image">
+                <p><strong>Proje Yeri:</strong> Kocaeli Merkez</p>
+                <p><strong>Uygulanan Hizmetler:</strong> Dış Cephe Mantolama (Isı Yalıtımı), Su Yalıtımı, Cephe Boya Uygulaması.</p>
+                <p><strong>Açıklama:</strong> Binanın A sınıfı enerji kimlik belgesi almasına katkıda bulunan yüksek yoğunluklu mantolama malzemeleri kullanılmıştır. Nem ve dış etkenlere karşı dayanıklı, uzun ömürlü silikon esaslı dış cephe boyası tercih edilmiştir.</p>
+                <a href="#iletisim" class="cta small-btn">Teklif Alın</a> </div>
+        </div>
+
+        <section id="iletisim" aria-labelledby="iletisim-title">
+            <div class="container">
+                <h3 class="section-title" id="iletisim-title">İletişim</h3>
+
+                <div class="contact-wrap">
+                    <form id="contactForm" onsubmit="return handleSend(event)">
+                        <label for="name">Adınız *</label>
+                        <input id="name" name="name" type="text" placeholder="Adınız ve soyadınız" required>
+
+                        <label for="email">E-posta *</label>
+                        <input id="email" name="email" type="email" placeholder="ornek@ornek.com" required>
+
+                        <label for="message">Mesajınız *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Proje detaylarınızı ya da talebinizi yazın" required></textarea>
+
+                        <div class="contact-form-footer"> <div class="small muted">Vesta Mimarlık — İnce İşler Taşeronluk</div>
+                            <button type="submit">Gönder</button>
+                        </div>
+                    </form>
+
+                    <aside class="contact-aside"> 
+                        <div class="contact-info-box"> <strong>Telefon</strong>
+                            <div class="small mt-6">0506 098 09 04</div> <a href="tel:+905060980904" class="small mt-8 inline-block">Hemen ara</a> </div>
+
+                        <div class="contact-info-box"> <strong>E-posta</strong>
+                            <div class="small mt-6">emrecelikkilic@gmail.com</div>
+                            <a href="mailto:emrecelikkilic@gmail.com" class="small mt-8 inline-block">E-posta gönder</a>
+                        </div>
+
+                        <div class="contact-info-box map-box"> <strong>Adres</strong>
+                            <div class="small mt-6">Cumhuriyet Mahallesi, Köroğlu Caddesi, No:67, D:4, Gebze / KOCAELİ</div>
+                            <div class="spacer-12"></div>
+                            <div class="map-wrap"> 
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    frameborder="0"
+                                    style="border:0"
+                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3019.699305747074!2d29.381276075503582!3d40.81260103145165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDQ4JzQ1LjQiTiAyOcKwMjMnMDEuOSJF!5e0!3m2!1sen!2str!4v1761230435071!5m2!1sen!2str" 
+                                    allowfullscreen
+                                    aria-hidden="false"
+                                    tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer> <div class="container footer-content"> 
+            <div>
+                <strong>Vesta Mimarlık</strong>
+                <div class="small muted">İnce İşler Taşeronluk Hizmetleri — Gebze / KOCAELİ</div>
+            </div>
+
+            <div class="footer-links"> 
+                <div class="socials">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="LinkedIn">LN</a>
+                </div>
+                <div class="small muted">© <span id="year"></span> Vesta Mimarlık. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Yıl göster
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{
+            a.addEventListener('click', function(e){
+                const href = this.getAttribute('href');
+                if(href.length>1){
+                    e.preventDefault();
+                    const el = document.querySelector(href);
+                    if(el){
+                        const y = el.getBoundingClientRect().top + window.scrollY - 70;
+                        window.scrollTo({top:y, behavior:'smooth'});
+                    }
+                }
+            });
+        });
+
+        // Basit form handler - mailto fallback
+        function handleSend(e){
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if(!name || !email || !message){
+                alert('Lütfen tüm alanları doldurun.');
+                return false;
+            }
+
+            // Basit e-mail doğrulama
+            const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRe.test(email)){
+                alert('Geçerli bir e-posta girin.');
+                return false;
+            }
+
+            const subject = encodeURIComponent('Web Sitesi Üzerinden Talep - ' + name);
+            const body = encodeURIComponent('İsim: ' + name + '\nE-posta: ' + email + '\n\nMesaj:\n' + message);
+            // mailto ile kullanıcı posta uygulamasını aç
+            window.location.href = `mailto:emrecelikkilic@gmail.com?subject=${subject}&body=${body}`;
+            return false;
+        }
+
+        // Eğer logo yoksa (onerror ile gizlendi) brand metnini biraz daha öne çıkar
+        window.addEventListener('load', ()=>{
+            const logo = document.querySelector('.brand img');
+            if(logo && logo.style.display === 'none'){
+                document.querySelector('.brand h1').style.fontSize = '20px';
+            }
+        });
+        
+        // MODAL (Pop-up) İşlevselliği
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalTriggers = document.querySelectorAll('.modal-trigger');
+            const modals = document.querySelectorAll('.modal');
+            const closeButtons = document.querySelectorAll('.close-btn');
+
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const modalId = this.getAttribute('data-modal');
+                    document.getElementById(modalId).style.display = 'block';
+                    document.body.style.overflow = 'hidden'; 
+                });
+            });
+
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
+                    document.body.style.overflow = 'auto'; 
+                });
+            });
+
+            window.addEventListener('click', function(event) {
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+        });
+
+    </script>
 </body>
 </html>
