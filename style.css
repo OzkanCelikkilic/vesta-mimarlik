@@ -607,7 +607,9 @@ footer{
 .gallery-slide {
     min-width: 100%; /* Her slaytın tüm alanı kaplamasını sağlar */
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    display: block; 
+    margin: 0 auto;
     display: none; /* Varsayılan olarak tüm görselleri gizle */
 }
 
@@ -649,7 +651,7 @@ footer{
 @media (max-width:980px){
     .hero{grid-template-columns:1fr; padding:28px 0}
     .about, .contact-wrap{grid-template-columns:1fr}
-    header .brand img{width:100px; height:100px}
+    header .brand img{width:64px; height:64px}
     nav ul{display:none}
 }
 @media (max-width:520px){
@@ -671,4 +673,3 @@ footer{
         gap: 10px;
     }
 }
-
