@@ -6,6 +6,7 @@
     <title>Vesta Mimarlık — İnce İşler Taşeronluk Hizmetleri</title>
     
     <meta name="description" content="Vesta Mimarlık - İnce işler taşeronluk (alçıpan, sıva, boya, mantolama, asma tavan, seramik vb.)" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" sizes="any">
@@ -265,6 +266,7 @@
                         <img src="images/project3.1.jpg" alt="Proje 3 - Detay 1" class="gallery-slide">
                         <img src="images/project3.2.jpg" alt="Proje 3 - Detay 2" class="gallery-slide">
                         <img src="images/project3.3.jpg" alt="Proje 3 - Detay 1" class="gallery-slide">
+                        <img src="images/project3.4.jpg" alt="Proje 3 - Detay 1" class="gallery-slide">
                     </div>
                     <button class="prev-btn" aria-label="Önceki Görsel">❮</button>
                     <button class="next-btn" aria-label="Sonraki Görsel">❯</button>
@@ -282,20 +284,22 @@
                 <h3 class="section-title" id="iletisim-title">İletişim</h3>
 
                 <div class="contact-wrap">
-                    <form id="contactForm" onsubmit="return handleSend(event)">
+                    <form id="contactForm"> 
                         <label for="name">Adınız *</label>
                         <input id="name" name="name" type="text" placeholder="Adınız ve soyadınız" required>
 
                         <label for="email">E-posta *</label>
                         <input id="email" name="email" type="email" placeholder="ornek@ornek.com" required>
+                        <input type="hidden" name="_replyto" value="info@vestamimarlik.com.tr">
 
                         <label for="message">Mesajınız *</label>
                         <textarea id="message" name="message" rows="6" placeholder="Proje detaylarınızı ya da talebinizi yazın" required></textarea>
 
                         <div class="contact-form-footer"> 
                             <div class="small muted">Vesta Mimarlık — İnce İşler Taşeronluk</div>
-                            <button type="submit">Gönder</button>
+                            <button type="submit" id="submitButton">Gönder</button>
                         </div>
+                        <div id="formStatus" style="margin-top: 15px; text-align: center; color: var(--gold); font-weight: bold;"></div> 
                     </form>
 
                     <aside class="contact-aside"> 
@@ -342,8 +346,8 @@
 
             <div class="footer-links"> 
                 <div class="socials">
-                    <a href="#" aria-label="Instagram">IG</a>
-                    <a href="#" aria-label="LinkedIn">LN</a>
+                    <a href="https://www.instagram.com/vesta.mimarlik" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
                 <div class="small muted">© <span id="year"></span> Vesta Mimarlık. Tüm Hakları Saklıdır.</div>
             </div>
@@ -369,30 +373,67 @@
             });
         });
 
-        // Basit form handler - mailto fallback
-        function handleSend(e){
-            e.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            if(!name || !email || !message){
-                alert('Lütfen tüm alanları doldurun.');
-                return false;
-            }
+        // FORM HANDLER: Fetch API ile Formspree entegrasyonu (Sayfa yenilemesi yok)
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            const statusDiv = document.getElementById('formStatus');
+            const submitButton = document.getElementById('submitButton');
 
-            // Basit e-mail doğrulama
-            const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if(!emailRe.test(email)){
-                alert('Geçerli bir e-posta girin.');
-                return false;
-            }
+            const formspreeUrl = "https://formspree.io/f/mdkynqpo"; // Yer tutucu ID
 
-            const subject = encodeURIComponent('Web Sitesi Üzerinden Talep - ' + name);
-            const body = encodeURIComponent('İsim: ' + name + '\nE-posta: ' + email + '\n\nMesaj:\n' + message);
-            // mailto ile kullanıcı posta uygulamasını aç
-            window.location.href = `mailto:info@vestamimarlik.com.tr?subject=${subject}&body=${body}`;
-            return false;
-        }
+            if (form) {
+                form.addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    
+                    // Basit E-posta doğrulaması (tarayıcının native kontrolünden ayrı)
+                    const emailInput = document.getElementById('email').value.trim();
+                    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if(!emailRe.test(emailInput)){
+                        statusDiv.textContent = 'Lütfen geçerli bir e-posta girin.';
+                        return;
+                    }
+
+                    // Buton durumunu ayarla
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Gönderiliyor...';
+                    statusDiv.textContent = ''; 
+
+                    const data = new FormData(e.target);
+                    
+                    try {
+                        const response = await fetch(formspreeUrl, {
+                            method: 'POST',
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Başarılı gönderim
+                            statusDiv.textContent = 'Mesajınız başarıyla gönderildi! Size en kısa sürede dönüş yapacağız.';
+                            form.reset(); // Formu sıfırla
+                        } else {
+                            // Hata durumları (Formspree sunucu tarafı)
+                            const errorData = await response.json();
+                            if (errorData.errors && errorData.errors.length > 0) {
+                                statusDiv.textContent = 'Gönderim hatası: Lütfen tüm alanları doğru doldurduğunuzdan emin olun.';
+                            } else {
+                                statusDiv.textContent = 'Sunucu hatası oluştu. Lütfen daha sonra tekrar deneyin.';
+                            }
+                        }
+                    } catch (error) {
+                        // Ağ hatası (Kullanıcı tarafı veya bağlantı sorunu)
+                        console.error("Form gönderme hatası:", error);
+                        statusDiv.textContent = 'Bağlantı hatası oluştu. Lütfen internet bağlantınızı kontrol edin.';
+                    } finally {
+                        // Son olarak butonu tekrar aktif et
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Gönder';
+                    }
+                });
+            }
+        });
 
         // Eğer logo yoksa (onerror ile gizlendi) brand metnini biraz daha öne çıkar
         window.addEventListener('load', ()=>{
@@ -441,7 +482,6 @@
             galleries.forEach(gallery => {
                 const slides = gallery.querySelectorAll('.gallery-slide');
                 
-                // *** ÖNEMLİ: Gezinme butonlarını DOM'da arayın, yeni ekledik ***
                 const prevBtn = gallery.querySelector('.prev-btn');
                 const nextBtn = gallery.querySelector('.next-btn');
                 
@@ -459,8 +499,6 @@
                     currentSlide = index;
                 }
 
-                // Başlangıçta ilk slaytı aktif et (Kodunuzda zaten vardı, bu yüzden tekrar çağırmaya gerek yok)
-                // Ancak JS'de de kontrol edelim:
                 if (slides.length > 0) {
                     showSlide(0); 
                 }
