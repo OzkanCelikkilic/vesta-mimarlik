@@ -47,7 +47,7 @@ To run this project locally, no complex installation is required.
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/OzkanCelikkilic/vestamimarlik.com.tr.git](https://github.com/OzkanCelikkilic/vestamimarlik.com.tr.git)
+    git clone https://github.com/OzkanCelikkilic/vestamimarlik.com.tr.git
     ```
 
 2.  **Navigate to the Directory:**
