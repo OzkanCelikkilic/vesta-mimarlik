@@ -1,10 +1,5 @@
-# Vesta Mimarlık - Corporate Website
 
-![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fvestamimarlik.com.tr&style=flat-square)
-![GitHub language count](https://img.shields.io/github/languages/count/OzkanCelikkilic/vestamimarlik.com.tr?style=flat-square)
-![GitHub top language](https://img.shields.io/github/languages/top/OzkanCelikkilic/vestamimarlik.com.tr?style=flat-square)
-
-This repository contains the source code for the official corporate website of **Vesta Mimarlık**, a subcontracting company based in Kocaeli, Türkiye, specializing in fine works (drywall, plaster, paint, insulation, etc.).
+This repository contains the source code for the official corporate website of **Vesta Mimarlik**, a subcontracting company based in Kocaeli, Türkiye, specializing in fine works (drywall, plaster, paint, insulation, etc.).
 
 The website is a clean, fast, and responsive single-page application (SPA) built with pure HTML, CSS, and Vanilla JavaScript. It is hosted on GitHub Pages with a custom domain.
 
@@ -35,12 +30,4 @@ This website was built from scratch using foundational web technologies, with no
 * **GitHub Pages:** For static site hosting and CI/CD.
 * **Google Fonts:** For typography (Inter).
 
-## 👤 Author
 
-* **Ozkan Celikkilic**
-* GitHub: [@OzkanCelikkilic](https://github.com/OzkanCelikkilic)
-
-## 📄 License
-
-The code in this repository is proprietary and copyrighted.
-© 2025 Vesta Mimarlık. All Rights Reserved.
