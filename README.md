@@ -11,7 +11,6 @@ It is built as a high-performance, fully responsive, single-page static website.
 The website is live and can be viewed at:
 **[https://vestamimarlik.com.tr](https://vestamimarlik.com.tr)**
 
-*(Buraya sitenizin bir veya iki ekran görüntüsünü ekleyebilirsiniz)*
 ## 3. Features
 
 * **Fully Responsive:** Adapts seamlessly to all screen sizes, from mobile to desktop.
@@ -50,7 +49,6 @@ To run this project locally, no complex installation is required.
     ```bash
     git clone [https://github.com/OzkanCelikkilic/vestamimarlik.com.tr.git](https://github.com/OzkanCelikkilic/vestamimarlik.com.tr.git)
     ```
-    *(Repo adınız farklıysa bunu güncelleyin)*
 
 2.  **Navigate to the Directory:**
     ```bash
